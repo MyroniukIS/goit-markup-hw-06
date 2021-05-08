@@ -350,15 +350,6 @@ img {
 .modal-input:focus + .modal-icon {
   fill:var(--accent-logo-hover-color);
 }
-.modal-label-checkbox {
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.71;
-}
-.modal-link {
-  color: var(--accent-logo-hover-color);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
 .modal-icon {
   position: absolute;
   top: 50%;
@@ -402,6 +393,14 @@ img {
   transform: translate(-50%, -50%);
   fill: var(--hero-footer-text-color);
   stroke: var(--hero-footer-text-color);
+}
+.modal-label-checkbox {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.71;
+}
+.modal-link {
+  color: var(--accent-logo-hover-color);
 }
 .modal-submit-btn {
   margin-right: auto;
