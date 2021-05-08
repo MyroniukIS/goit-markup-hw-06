@@ -390,12 +390,19 @@
                 <label class="modal-label" for="coment">Комментарий</label>
                 <textarea class="modal-input modal-coment-text-area" patern="^[А-Яа-яЁё\s]+$" name="modal-text-area-text" id="coment" placeholder="Введите текст"></textarea>
 
-                <input class="checkbox-place" type="checkbox" name="checkbox-value" id="modal-checkbox" />
-                <label class="modal-label-checkbox" for="modal-checkbox">Соглашаюсь с рассылкой и принимаю 
-                    <a class="modal-link" href="#">Условия договора</a>
-                </label>
-
-                <button class="section-btn" type="submit">Отправить</button>
+                <div class="checkbox-wrap">
+                    <input class="checkbox-place" type="checkbox" name="checkbox-value" id="modal-checkbox" />
+                    <span class="checkbox-icon-wrap">
+                        <svg class="checkbox-icon" width="16" height="15">
+                            <use href="./images/spriteform.svg#icon-checkbox"></use>
+                        </svg>
+                    </span>
+                    <label class="modal-label-checkbox" for="modal-checkbox">Соглашаюсь с рассылкой и принимаю 
+                        <a class="modal-link" href="#">Условия договора</a>
+                    </label>
+                </div>
+                
+                <button class="section-btn modal-submit-btn" type="submit">Отправить</button>
             </form>
         </div>
     </div>

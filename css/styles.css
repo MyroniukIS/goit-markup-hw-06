@@ -321,10 +321,12 @@ img {
 }
 .modal-input {
   width: 100%;
-  padding: 11px 12px 11px 35px;
+  padding: 11px 12px 11px 42px;
   border: 1px solid var(--modal-input-border);  
   border-radius: 4px;
+  outline: none;
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  color: var(--headers-nav-color);
 }
 .modal-coment-text-area {
   width: 100%;
@@ -345,19 +347,9 @@ img {
 .modal-coment-text-area:focus {
   border: 1px solid var(--accent-logo-hover-color);
 }
-.modal-input:focus .modal-icon {
+.modal-input:focus + .modal-icon {
   fill:var(--accent-logo-hover-color);
 }
-/* .modal-input:valid:not(:placeholder-shown):focus,
-.modal-coment-text-area:valid:not(:placeholder-shown):focus {
-  color: lightseagreen;
-  border-bottom-color: lightseagreen;
-}
-.modal-input:invalid:not(:placeholder-shown):focus,
-.modal-coment-text-area:invalid:not(:placeholder-shown):focus {
-  color: crimson;
-  border-bottom-color: crimson;
-} */
 .modal-label-checkbox {
   font-weight: 500;
   font-size: 14px;
@@ -373,12 +365,49 @@ img {
   left: 12px;
   transform: translateY(-50%);
   fill: var(--headers-nav-color);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.checkbox-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
 }
 .checkbox-place {
+  -webkit-appearance: none;
+  -moz-appearance: none;
   appearance: none;
   position: absolute;
 }
-.modal-label-checkbox
+.checkbox-place:checked + .checkbox-icon-wrap {
+  background-color: var(--accent-logo-hover-color);
+  border: 2px solid var(--accent-logo-hover-color);
+}
+.checkbox-icon-wrap{
+  position: relative;
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  margin-right: 7px;
+  background-color: var(--main-bcg-color);
+  border: 2px solid var(--headers-nav-color);
+  border-radius: 2px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), 
+  border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.checkbox-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  fill: var(--hero-footer-text-color);
+  stroke: var(--hero-footer-text-color);
+}
+.modal-submit-btn {
+  margin-right: auto;
+  margin-left: auto;
+}
+
 
 /*FEATURES*/
 .features-list {
@@ -645,7 +674,7 @@ img {
   min-width: 358px;
   border: 1px solid var(--footer-input-border);
   border-radius: 4px;
-  filter: drop-shadow (0px 4px 4px var(--shadov-0-15));
+  outline: none;
   background-color: transparent;
   color: var(--alfa-color);
 }
