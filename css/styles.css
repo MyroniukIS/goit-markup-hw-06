@@ -372,6 +372,7 @@ img {
   line-height: 1.71;
 }
 .modal-link {
+  margin-left: 5px;
   color: var(--accent-logo-hover-color);
 }
 .checkbox-place {
